@@ -16,4 +16,6 @@ git branch -f develop origin/develop
 ```
 
 ### Find commits with a given "string" in their title
+```
 git log --pretty='format:%cd %h %s' | grep -i "string"
+```
