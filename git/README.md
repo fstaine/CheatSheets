@@ -14,3 +14,6 @@ GIT_COMMITTER_DATE="Fri April 3 17:09 2020 +0200" git commit --amend
 ```
 git branch -f develop origin/develop
 ```
+
+### Find commits with a given "string" in their title
+git log --pretty='format:%cd %h %s' | grep -i "string"
