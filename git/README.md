@@ -19,3 +19,9 @@ git branch -f develop origin/develop
 ```
 git log --pretty='format:%cd %h %s' | grep -i "string"
 ```
+
+### Get the files that are not in the index
+```
+git clean -n
+```
+The `-n` only show the files but do not apply the modifications
