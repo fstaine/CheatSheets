@@ -25,3 +25,8 @@ git log --pretty='format:%cd %h %s' | grep -i "string"
 git clean -n
 ```
 The `-n` only show the files but do not apply the modifications
+
+### Remove files (filenames) from the tracked files
+```
+git rm --cached filenames
+```
