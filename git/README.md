@@ -32,10 +32,12 @@ git rm --cached <filenames>
 ```
 
 ### Revert the deletion of a file (filename)
+Get the commit where the deletion occurs
 ```
 git log -- <filename>
 ```
 
+Checkout the file from the commit previous to this deletion
 ```
 git checkout <deletion commit hash>~1 -- <filename>
 ```
