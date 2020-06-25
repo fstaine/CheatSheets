@@ -28,5 +28,14 @@ The `-n` only show the files but do not apply the modifications
 
 ### Remove files (filenames) from the tracked files
 ```
-git rm --cached filenames
+git rm --cached <filenames>
+```
+
+### Revert the deletion of a file (filename)
+```
+git log -- <filename>
+```
+
+```
+git checkout <deletion commit hash>~1 -- <filename>
 ```
