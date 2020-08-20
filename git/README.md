@@ -41,3 +41,8 @@ Checkout the file from the commit previous to this deletion
 ```
 git checkout <deletion commit hash>~1 -- <filename>
 ```
+
+### Get all the changes on a specific file
+```
+git log -p <filename>
+```
