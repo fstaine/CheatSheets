@@ -46,3 +46,15 @@ git checkout <deletion commit hash>~1 -- <filename>
 ```
 git log -p <filename>
 ```
+
+### Clean inexistant branches
+Remove remote branches which doesn't exists
+```
+git fetch -p
+```
+
+List branches which are merged into the current branch
+```
+git branch --merged
+git branch -d <feature/already-merged>
+```
