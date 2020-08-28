@@ -48,7 +48,7 @@ git log -p <filename>
 ```
 
 ### Clean inexistant branches
-Remove remote branches which doesn't exists
+Remove remote branches which doesn't exists on remote
 ```
 git fetch -p
 ```
