@@ -53,7 +53,7 @@ Remove remote branches which doesn't exists
 git fetch -p
 ```
 
-List branches which are merged into the current branch
+List branches which are merged into the current branch and remove the already merged
 ```
 git branch --merged
 git branch -d <feature/already-merged>
