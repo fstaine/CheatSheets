@@ -58,3 +58,8 @@ List branches which are merged into the current branch and remove the already me
 git branch --merged
 git branch -d <feature/already-merged>
 ```
+
+Clean merged branches, except thoses containing 'master' or 'dev' in their name
+```
+git branch --merged | grep -i -v -E "master|dev" | xargs git branch -d
+```
