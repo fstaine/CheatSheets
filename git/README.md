@@ -61,5 +61,5 @@ git branch -d <feature/already-merged>
 
 Clean merged branches, except thoses containing 'master' or 'dev' in their name
 ```
-git branch --merged develop | grep -i -v -E "master|dev" | xargs git branch -d
+git branch --merged develop | grep -i -v -E "master|develop" | xargs git branch -d
 ```
