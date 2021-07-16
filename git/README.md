@@ -44,7 +44,7 @@ git checkout <deletion commit hash>~1 -- <filename>
 
 ### Get all the changes on a specific file
 ```
-git log -p <filename>
+git log --follow -- <filename>
 ```
 
 ### Clean inexistant branches
