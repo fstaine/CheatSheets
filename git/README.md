@@ -63,3 +63,8 @@ Clean merged branches, except thoses containing 'master' or 'dev' in their name
 ```
 git branch --merged develop | grep -i -v -E "master|develop" | xargs git branch -d
 ```
+
+### Get the content of a file at a specific revision
+```
+git show <revision>:<filename> > <output>
+```
