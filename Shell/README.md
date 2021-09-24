@@ -12,3 +12,14 @@ Options:
 ```bash
 netstat -t --listening
 ```
+### Pub job in foreground
+
+Show jobs in background
+```bash
+jobs
+```
+
+Put a job in foreground
+```bash
+fg <ID>
+```
