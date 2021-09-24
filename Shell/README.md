@@ -12,7 +12,7 @@ Options:
 ```bash
 netstat -t --listening
 ```
-### Pub job in foreground
+### Put job in foreground
 
 Show jobs in background
 ```bash
