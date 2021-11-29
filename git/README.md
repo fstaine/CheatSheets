@@ -10,6 +10,11 @@ git fetch origin develop:develop
 GIT_COMMITTER_DATE="Fri April 3 17:09 2020 +0200" git commit --amend
 ```
 
+### Move a branch if remote was rebased
+```
+git reset --hard origin/feature/XXX
+```
+
 ### Move a branch (develop) back to another commit (origin/develop)
 ```
 git branch -f develop origin/develop
