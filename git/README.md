@@ -25,6 +25,18 @@ git branch -f develop origin/develop
 git log --pretty='format:%cd %h %s' | grep -i "string"
 ```
 
+### Find the commits with given (serach string) in it.
+Show full commit diff:
+```
+git log -S'search string' -p
+```
+
+Show commit diff:
+```
+git log -S'search string' --oneline --name-status
+```
+You can also do a regex search by using -G instead of -S.
+
 ### Get the files that are not in the index
 ```
 git clean -n
