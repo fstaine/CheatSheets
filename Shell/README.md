@@ -23,3 +23,8 @@ Put a job in foreground
 ```bash
 fg <ID>
 ```
+
+# ZSH
+
+### Add global path to $PATH
+Add Path to `/etc/zsh/zshenv`
