@@ -59,6 +59,13 @@ Checkout the file from the commit previous to this deletion
 git checkout <deletion commit hash>~1 -- <filename>
 ```
 
+### Delete a tag
+```sh
+git tag -d <tagname> # Delete local tag
+git push --delete origin <tagname> # Delete a remote tag
+```
+
+
 ### Get all the changes on a specific file
 ```
 git log --follow -- <filename>
