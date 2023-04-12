@@ -13,3 +13,4 @@ terragrunt state push ~/copy.tfstate
 terragrunt plan
 ```
 
+_Source: https://www.maxivanov.io/how-to-move-resources-and-modules-in-terragrunt/_
