@@ -5,6 +5,11 @@
 dpkg -l
 ```
 
+### Search package
+```bash
+apt-cache search XXX
+```
+
 ### List used ports
 Options:
  * `-t` TCP ports
