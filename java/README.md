@@ -28,3 +28,32 @@ public abstract class ResolvedOrganizationMapper {
     }
 }
 ```
+
+Use a mapper defined manually:
+
+```java
+@RequiredArgsConstructor
+@Component
+@Named("OrganizationCygognEmailAddressMapper")
+public class OrganizationCygognEmailAddressMapper {
+
+    private final CygognEmailAddressBuilder cygognEmailAddressBuilder;
+
+    @Named("toCygognEmailAddress")
+    public String toCygognEmailAddress(Organization organization)
+        throws MessagingException, UnsupportedEncodingException {
+        return cygognEmailAddressBuilder
+            .execute(organization.getCountryCode(), organization.getNationalId(), organization.getName())
+            .toUnicodeString();
+    }
+}
+
+@Mapper(config = MappingConfiguration.class, uses = OrganizationCygognEmailAddressMapper.class)
+public interface OrganizationCreatedEventMapper {
+
+    @Mapping(source = "organization", target = "cygEmailAddr",
+        qualifiedByName = {"OrganizationCygognEmailAddressMapper", "toCygognEmailAddress"})
+    OrganizationCreatedEventMessage toEvent(Organization organization, List<Person> persons);
+}
+
+```
