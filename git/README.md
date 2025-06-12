@@ -20,6 +20,31 @@ git reset --hard origin/feature/XXX
 git branch -f develop origin/develop
 ```
 
+### Rebase feature B without Feature A
+
+```
+                            H---I---J topicB
+                           /
+                  E---F---G  topicA
+                 /
+    A---B---C---D  master
+```
+then the command
+
+```
+git rebase --onto master topicA topicB
+```
+would result in:
+
+```
+                 H'--I'--J'  topicB
+                /
+                | E---F---G  topicA
+                |/
+    A---B---C---D  master
+```
+[Source](https://git-scm.com/docs/git-rebase)
+
 ### Find commits with a given "string" in their title
 ```
 git log --pretty='format:%cd %h %s' | grep -i "string"
