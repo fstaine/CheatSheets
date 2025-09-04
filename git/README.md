@@ -1,5 +1,10 @@
 # Git
 
+### Create a branch and checkout
+```
+git checkout -b <branchname>
+```
+
 ### Fetch a remote (origin) branch (develop:) into local branch (:develop) without checkout
 ```
 git fetch origin develop:develop
