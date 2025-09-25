@@ -122,3 +122,12 @@ git branch --merged develop | grep -i -v -E "master|develop" | xargs git branch 
 ```
 git show <revision>:<filename> > <output>
 ```
+
+### Cherry-pick a list of commits
+```
+#To cherry-pick all the commits from commit A to commit B (where A is older than B), run:
+git cherry-pick A^..B
+
+# If you want to ignore A itself, run:
+git cherry-pick A..B
+```
