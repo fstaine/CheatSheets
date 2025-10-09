@@ -8,3 +8,9 @@
 docker ps
 docker exec -it <mycontainer> bash
 ```
+
+### Get an intermediary container ID:
+
+```
+DOCKER_BUILDKIT=0 docker build...
+```
